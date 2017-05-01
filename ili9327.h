@@ -18,15 +18,16 @@
 void lcdWriteByte(uint8_t byte);
 void lcdWriteCommand(uint8_t c);
 void lcdWriteData(uint8_t c);
-void lcdWriteData16(uint16_t w);
 void lcdInit(void);
 void lcdReset(void);
 void lcdSetup(void);
 void lcdDrawPixel(uint16_t x, uint16_t y, uint16_t color);
-void lcdDrawAngle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color);
+void lcdDrawFillRect(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color);
 void lcdFillScreen(uint16_t color);
 void lcdDrawLine(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color);
 void lcdDrawRect(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color);
+void lcdDisplayOff();
+void lcdDisplayOn();
 void lcdDrawCircle(uint16_t x0, uint16_t y0, uint16_t r, uint16_t color);
 void lcdDrawFillCircle(uint16_t x0, uint16_t y0, uint16_t r, uint16_t color);
 void lcdDrawRoundRect(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t r, uint16_t color);

@@ -192,13 +192,13 @@ void lcdDrawPixel(uint16_t x, uint16_t y, uint16_t color){
   lcdWriteData(color&0xff);
 }
 
-// Draw angle
+// Draw rectangule of filling
 // x1:Start X coordinate
 // y1:Start Y coordinate
 // x2:End X coordinate
 // y2:End Y coordinate
 // color:color
-void lcdDrawAngle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color){
+void lcdDrawFillRect(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color){
   unsigned int i,j; 
 if(_DEBUG_)printf("x1=%d y1=%d x2=%d y2=%d\n",x1,y1,x2,y2);
   if (x1 > XMAX) return;
@@ -243,7 +243,7 @@ void lcdDisplayOn(){
 // Fill screen
 // color:color
 void lcdFillScreen(uint16_t color){
-  lcdDrawAngle(0,0,XMAX-1,YMAX-1,color);
+  lcdDrawFillRect(0,0,XMAX-1,YMAX-1,color);
 }
 
 // Draw line
